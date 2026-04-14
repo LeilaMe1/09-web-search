@@ -22,8 +22,11 @@ topicSelect.addEventListener('change', async () => {
         'Authorization': `Bearer ${apiKey}`
       },
       body: JSON.stringify({
-        model: 'gpt-4o',
-
+        //model: 'gpt-4o',
+        model: 'gpt-5-search-api',
+        web_search_options: {
+          search_context_size: "low",
+        },
         messages: [
           {
             role: 'system',
